@@ -16,7 +16,7 @@ Web Service para gestionar divisas y conversiones, con historial y consulta de t
 
 1. Clona el repositorio:
 ```
-git clone https://github.com/tu_usuario/ws-conversion.git
+git clone https://github.com/RusselCanche/WSDivisas.git
 cd ws-conversion
 ```
 2. Configura la base de datos MySQL en "application.properties":
