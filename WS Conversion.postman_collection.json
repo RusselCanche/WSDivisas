@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "089e14f2-a403-40d3-80ad-84742c034898",
+		"name": "WS Conversion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24864291"
+	},
+	"item": [
+		{
+			"name": "Divisa",
+			"item": [
+				{
+					"name": "Listar todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/divisas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"divisas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/divisas/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"divisas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"MXN\",\r\n    \"name\": \"Peso Mexicano\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/divisas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"divisas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"MXN\",\r\n    \"name\": \"Pesos Mexicanos\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/divisas/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"divisas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/divisas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"divisas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conversion",
+			"item": [
+				{
+					"name": "Buscar conversion por divisas (hoy)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/conversion?from=USD&to=MXN",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conversion"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "USD"
+								},
+								{
+									"key": "to",
+									"value": "MXN"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historial completo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conversion/historial",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conversion",
+								"historial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar conversion por divisas y fecha (historico)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conversion/historial/buscar?from=USD&to=MXN&date=2025-09-08",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conversion",
+								"historial",
+								"buscar"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "USD"
+								},
+								{
+									"key": "to",
+									"value": "MXN"
+								},
+								{
+									"key": "date",
+									"value": "2025-09-08"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar conversion por divisas (en historico)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conversion/historial/divisas?from=USD&to=MXN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conversion",
+								"historial",
+								"divisas"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "USD"
+								},
+								{
+									"key": "to",
+									"value": "MXN"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar conversion por divisas (en historico) Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conversion/historial/fecha?date=2025-09-08",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conversion",
+								"historial",
+								"fecha"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-09-08"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
